@@ -6,11 +6,8 @@
 
   # Use https://search.nixos.org/packages to find packages
   packages = [
-    # pkgs.go
-    # pkgs.python311
-    # pkgs.python311Packages.pip
-    # pkgs.nodejs_20
-    # pkgs.nodePackages.nodemon
+    pkgs.nodejs_20
+    pkgs.nodePackages.pnpm
   ];
 
   # Sets environment variables in the workspace
@@ -24,17 +21,54 @@
     # Enable previews
     previews = {
       enable = true;
-      previews = {
-        # web = {
-        #   # Example: run "npm run dev" with PORT set to IDX's defined port for previews,
-        #   # and show it in IDX's web preview panel
-        #   command = ["npm" "run" "dev"];
-        #   manager = "web";
-        #   env = {
-        #     # Environment variables to set for your server
-        #     PORT = "$PORT";
-        #   };
-        # };
+      experiment-01 = {
+        command = ["pnpm" "--filter" "experiment-01" "dev"];
+        manager = "web";
+        env = {
+          PORT = "$PORT";
+        };
+      };
+      experiment-02 = {
+        command = ["pnpm" "--filter" "experiment-02" "dev"];
+        manager = "web";
+        env = {
+          PORT = "$PORT";
+        };
+      };
+      experiment-03 = {
+        command = ["pnpm" "--filter" "experiment-03" "dev"];
+        manager = "web";
+        env = {
+          PORT = "$PORT";
+        };
+      };
+      experiment-04 = {
+        command = ["pnpm" "--filter" "experiment-04" "dev"];
+        manager = "web";
+        env = {
+          PORT = "$PORT";
+        };
+      };
+      experiment-05 = {
+        command = ["pnpm" "--filter" "experiment-05" "dev"];
+        manager = "web";
+        env = {
+          PORT = "$PORT";
+        };
+      };
+      experiment-06 = {
+        command = ["pnpm" "--filter" "experiment-06" "dev"];
+        manager = "web";
+        env = {
+          PORT = "$PORT";
+        };
+      };
+      experiment-07 = {
+        command = ["pnpm" "--filter" "experiment-07" "dev"];
+        manager = "web";
+        env = {
+          PORT = "$PORT";
+        };
       };
     };
 
@@ -42,8 +76,7 @@
     workspace = {
       # Runs when a workspace is first created
       onCreate = {
-        # Example: install JS dependencies from NPM
-        # npm-install = "npm install";
+        npm-install = "pnpm install";
       };
       # Runs when the workspace is (re)started
       onStart = {
