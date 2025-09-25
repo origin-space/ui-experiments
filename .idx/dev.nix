@@ -21,53 +21,13 @@
     # Enable previews
     previews = {
       enable = true;
-      experiment-01 = {
-        command = ["pnpm" "--filter" "experiment-01" "dev"];
-        manager = "web";
-        env = {
-          PORT = "$PORT";
-        };
-      };
-      experiment-02 = {
-        command = ["pnpm" "--filter" "experiment-02" "dev"];
-        manager = "web";
-        env = {
-          PORT = "$PORT";
-        };
-      };
-      experiment-03 = {
-        command = ["pnpm" "--filter" "experiment-03" "dev"];
-        manager = "web";
-        env = {
-          PORT = "$PORT";
-        };
-      };
-      experiment-04 = {
-        command = ["pnpm" "--filter" "experiment-04" "dev"];
-        manager = "web";
-        env = {
-          PORT = "$PORT";
-        };
-      };
-      experiment-05 = {
-        command = ["pnpm" "--filter" "experiment-05" "dev"];
-        manager = "web";
-        env = {
-          PORT = "$PORT";
-        };
-      };
-      experiment-06 = {
-        command = ["pnpm" "--filter" "experiment-06" "dev"];
-        manager = "web";
-        env = {
-          PORT = "$PORT";
-        };
-      };
-      experiment-07 = {
-        command = ["pnpm" "--filter" "experiment-07" "dev"];
-        manager = "web";
-        env = {
-          PORT = "$PORT";
+      previews = {
+        shell = {
+          command = ["pnpm" "--filter" "experiment-shell" "dev"];
+          manager = "web";
+          env = {
+            PORT = "$PORT";
+          };
         };
       };
     };
